@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        <cconfiguration id="com.ti.ccstudio.buildDefinitions.C2000.Default.1741186814">
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.C2000.Default.1741186814" moduleId="org.eclipse.cdt.core.settings" name="RAM">
+                <macros>
+                    <stringMacro name="DUMMY_CERT" type="VALUE_TEXT" value="1"/>
+                </macros>
+                <externalSettings/>
+                <extensions>
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="com.ti.ccs.errorparser.SysConfigErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="com.ti.ccs.errorparser.CompilerErrorParser_TI" point="com.ti.ccs.project.ErrorParser"/>
+                </extensions>
+            </storageModule>
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                <configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.C2000.Default.1741186814" name="RAM" parent="com.ti.ccstudio.buildDefinitions.C2000.Default" postbuildStep="                  ${CG_TOOL_OBJCOPY} -O binary ${ProjName}.out ${ProjName}.bin;                   ;$(call IF_EQUAL_OPEN, ${DUMMY_CERT}, 0) $(PYTHON) ${COM_TI_MCU_SDK_INSTALL_DIR}/tools/boot/signing/mcu_rom_image_gen.py --image-bin ${ProjName}.bin --core C29 --swrv 1 --loadaddr 0x200E1000 --sign-key ${COM_TI_MCU_SDK_INSTALL_DIR}/tools/boot/signing/mcu_gpkey.pem --out-image ${ProjName}_cert.bin --device f29h85x --boot RAM --img_integ no $(IF_EQUAL_CLOSE);                    ;$(call IF_EQUAL_OPEN, ${DUMMY_CERT}, 1) ${COM_TI_MCU_SDK_INSTALL_DIR}/tools/misc/$(UPDATEDUMMYCERT) $(DUMMY_CERT_RAM) ${ProjName}.bin $(IF_EQUAL_CLOSE);         ;$(call IF_EQUAL_OPEN, ${DUMMY_CERT}, 1) $(CONCAT) $(DUMMY_CERT_RAM) ${ProjName}.bin &gt; ${ProjName}_cert.bin $(IF_EQUAL_CLOSE);        ">
+                    <folderInfo id="com.ti.ccstudio.buildDefinitions.C2000.Default.1741186814." name="/" resourcePath="">
+                        <toolChain id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.DebugToolchain.1137268858" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.linkerDebug.160847943">
+                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.483401852" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+                                <listOptionValue value="DEVICE_CONFIGURATION_ID=TMS320C29XX.F29H850TU9"/>
+                                <listOptionValue value="DEVICE_CORE_ID="/>
+                                <listOptionValue value="DEVICE_ENDIANNESS=little"/>
+                                <listOptionValue value="OUTPUT_FORMAT=ELF"/>
+                                <listOptionValue value="CCS_MBS_VERSION=70.0.0"/>
+                                <listOptionValue value="RUNTIME_SUPPORT_LIBRARY="/>
+                                <listOptionValue value="OUTPUT_TYPE=executable"/>
+                                <listOptionValue value="PRODUCTS=sysconfig:1.26.0;f29h85x-sdk:1.2.1.00;"/>
+                                <listOptionValue value="PRODUCT_MACRO_IMPORTS={&quot;sysconfig&quot;:[&quot;${SYSCONFIG_TOOL_INCLUDE_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARY_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARIES}&quot;,&quot;${SYSCONFIG_TOOL_SYMBOLS}&quot;,&quot;${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}&quot;],&quot;f29h85x-sdk&quot;:[&quot;${COM_TI_F29H85X_SDK_INCLUDE_PATH}&quot;,&quot;${COM_TI_F29H85X_SDK_LIBRARY_PATH}&quot;,&quot;${COM_TI_F29H85X_SDK_LIBRARIES}&quot;,&quot;${COM_TI_F29H85X_SDK_SYMBOLS}&quot;,&quot;${COM_TI_F29H85X_SDK_SYSCONFIG_MANIFEST}&quot;]}"/>
+                            </option>
+                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.849942183" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="TICLANG_2.0.0.STS" valueType="string"/>
+                            <targetPlatform id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.targetPlatformDebug.360829865" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.targetPlatformDebug"/>
+                            <builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.builderDebug.1407397568" keepEnvironmentInBuildfile="false" name="GNU Make" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.builderDebug"/>
+                            <tool id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.compilerDebug.460933957" name="C2000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.compilerDebug">
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.INCLUDE_PATH.791589338" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.INCLUDE_PATH" valueType="includePath">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${PROJECT_ROOT}"/>
+                                    <listOptionValue value="${CG_TOOL_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/KalangoRTOS/include"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.DEFINE.323547000" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.DEFINE" valueType="definedSymbols">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_SYMBOLS}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_SYMBOLS}"/>
+                                    <listOptionValue value="DEBUG"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OPT_LEVEL.2034158822" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OPT_LEVEL.0" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.GENERATE_DWARF_DEBUG.300746394" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.GENERATE_DWARF_DEBUG" value="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.GENERATE_DWARF_DEBUG.G_LOWERCASE" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OTHER_FLAGS.324240254" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OTHER_FLAGS" valueType="stringList">
+                                    <listOptionValue value="-Qunused-arguments"/>
+                                </option>
+                            </tool>
+                            <tool id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.linkerDebug.160847943" name="C2000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.linkerDebug">
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.OUTPUT_FILE.1716659195" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.OUTPUT_FILE" value="${ProjName}.out" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.MAP_FILE.1558002118" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.MAP_FILE" value="${ProjName}.map" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.XML_LINK_INFO.1404995529" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.XML_LINK_INFO" value="${ProjName}_linkInfo.xml" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DISPLAY_ERROR_NUMBER.1605256714" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_WRAP.403709769" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.SEARCH_PATH.390226838" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.SEARCH_PATH" valueType="libPaths">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARY_PATH}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_LIBRARY_PATH}"/>
+                                    <listOptionValue value="${CG_TOOL_SEARCH_PATH}"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.LIBRARY.853809550" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.LIBRARY" valueType="libs">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARIES}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_LIBRARIES}"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.STACK_SIZE.806431744" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.STACK_SIZE" value="0x2000" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.HEAP_SIZE.652626302" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.HEAP_SIZE" value="0x400" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_SUPPRESS.1526018083" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_SUPPRESS" valueType="stringList">
+                                    <listOptionValue value="10325-D"/>
+                                    <listOptionValue value="10063-D"/>
+                                </option>
+                            </tool>
+                            <tool id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.objcopy.1845067810" name="C2000 Objcopy Utility" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.objcopy"/>
+                            <tool id="com.ti.ccstudio.buildDefinitions.sysConfig.1495601146" name="SysConfig" superClass="com.ti.ccstudio.buildDefinitions.sysConfig">
+                                <option id="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS.802800576" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS" valueType="stringList">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_SYSCONFIG_MANIFEST}"/>
+                                </option>
+                            </tool>
+                        </toolChain>
+                    </folderInfo>
+                    <sourceEntries>
+                        <entry excluding="f29h85x_flash_lnk.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                    </sourceEntries>
+                </configuration>
+            </storageModule>
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+        </cconfiguration>
+        <cconfiguration id="com.ti.ccstudio.buildDefinitions.C2000.Default.1460498024">
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.C2000.Default.1460498024" moduleId="org.eclipse.cdt.core.settings" name="FLASH">
+                <macros>
+                    <stringMacro name="DUMMY_CERT" type="VALUE_TEXT" value="1"/>
+                </macros>
+                <externalSettings/>
+                <extensions>
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="com.ti.ccs.errorparser.SysConfigErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="com.ti.ccs.errorparser.CompilerErrorParser_TI" point="com.ti.ccs.project.ErrorParser"/>
+                </extensions>
+            </storageModule>
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                <configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.C2000.Default.1460498024" name="FLASH" parent="com.ti.ccstudio.buildDefinitions.C2000.Default" postbuildStep="                  ${CG_TOOL_OBJCOPY} --remove-section=cert -O binary ${ProjName}.out ${ProjName}.bin;                   ;$(call IF_EQUAL_OPEN, ${DUMMY_CERT}, 0) $(PYTHON) ${COM_TI_MCU_SDK_INSTALL_DIR}/tools/boot/signing/mcu_rom_image_gen.py --image-bin ${ProjName}.bin --core C29 --swrv 1 --loadaddr 0x10001000 --sign-key ${COM_TI_MCU_SDK_INSTALL_DIR}/tools/boot/signing/mcu_gpkey.pem --out-image ${ProjName}_cert.bin --device f29h85x --boot FLASH --img_integ no $(IF_EQUAL_CLOSE);          ;$(call IF_EQUAL_OPEN, ${DUMMY_CERT}, 0) ${CG_TOOL_OBJCOPY} --update-section cert=C29-cert-pad.bin ${ProjName}.out ${ProjName}.out $(IF_EQUAL_CLOSE);                   ;$(call IF_EQUAL_OPEN, ${DUMMY_CERT}, 1) ${COM_TI_MCU_SDK_INSTALL_DIR}/tools/misc/$(UPDATEDUMMYCERT) $(DUMMY_CERT_FLASH) ${ProjName}.bin $(IF_EQUAL_CLOSE);         ;$(call IF_EQUAL_OPEN, ${DUMMY_CERT}, 1) $(CONCAT) $(DUMMY_CERT_FLASH) ${ProjName}.bin &gt; ${ProjName}_cert.bin $(IF_EQUAL_CLOSE);          ;$(call IF_EQUAL_OPEN, ${DUMMY_CERT}, 1) ${CG_TOOL_OBJCOPY} --update-section cert=$(DUMMY_CERT_FLASH) ${ProjName}.out ${ProjName}.out $(IF_EQUAL_CLOSE);       ">
+                    <folderInfo id="com.ti.ccstudio.buildDefinitions.C2000.Default.1460498024." name="/" resourcePath="">
+                        <toolChain id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.DebugToolchain.925683213" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.linkerDebug.662489154">
+                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.805274078" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+                                <listOptionValue value="DEVICE_CONFIGURATION_ID=TMS320C29XX.F29H850TU9"/>
+                                <listOptionValue value="DEVICE_CORE_ID="/>
+                                <listOptionValue value="DEVICE_ENDIANNESS=little"/>
+                                <listOptionValue value="OUTPUT_FORMAT=ELF"/>
+                                <listOptionValue value="CCS_MBS_VERSION=70.0.0"/>
+                                <listOptionValue value="RUNTIME_SUPPORT_LIBRARY="/>
+                                <listOptionValue value="OUTPUT_TYPE=executable"/>
+                                <listOptionValue value="PRODUCTS=sysconfig:1.26.0;f29h85x-sdk:1.2.1.00;"/>
+                                <listOptionValue value="PRODUCT_MACRO_IMPORTS={&quot;sysconfig&quot;:[&quot;${SYSCONFIG_TOOL_INCLUDE_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARY_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARIES}&quot;,&quot;${SYSCONFIG_TOOL_SYMBOLS}&quot;,&quot;${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}&quot;],&quot;f29h85x-sdk&quot;:[&quot;${COM_TI_F29H85X_SDK_INCLUDE_PATH}&quot;,&quot;${COM_TI_F29H85X_SDK_LIBRARY_PATH}&quot;,&quot;${COM_TI_F29H85X_SDK_LIBRARIES}&quot;,&quot;${COM_TI_F29H85X_SDK_SYMBOLS}&quot;,&quot;${COM_TI_F29H85X_SDK_SYSCONFIG_MANIFEST}&quot;]}"/>
+                            </option>
+                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1238929678" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="TICLANG_2.0.0.STS" valueType="string"/>
+                            <targetPlatform id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.targetPlatformDebug.269335868" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.targetPlatformDebug"/>
+                            <builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.builderDebug.587787467" keepEnvironmentInBuildfile="false" name="GNU Make" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.builderDebug"/>
+                            <tool id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.compilerDebug.306338931" name="C2000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.compilerDebug">
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.INCLUDE_PATH.70089472" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.INCLUDE_PATH" valueType="includePath">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/KalangoRTOS/include"/>
+                                    <listOptionValue value="${PROJECT_ROOT}"/>
+                                    <listOptionValue value="${CG_TOOL_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/kalango_rtos_config"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.DEFINE.1849753645" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.DEFINE" valueType="definedSymbols">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_SYMBOLS}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_SYMBOLS}"/>
+                                    <listOptionValue value="DEBUG"/>
+                                    <listOptionValue value="_FLASH"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OPT_LEVEL.2044640509" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OPT_LEVEL.0" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.GENERATE_DWARF_DEBUG.756306761" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.GENERATE_DWARF_DEBUG" value="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.GENERATE_DWARF_DEBUG.G_LOWERCASE" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OTHER_FLAGS.12714108" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OTHER_FLAGS" valueType="stringList">
+                                    <listOptionValue value="-Qunused-arguments"/>
+                                </option>
+                            </tool>
+                            <tool id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.linkerDebug.662489154" name="C2000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.linkerDebug">
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.OUTPUT_FILE.769864007" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.OUTPUT_FILE" value="${ProjName}.out" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.MAP_FILE.52787406" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.MAP_FILE" value="${ProjName}.map" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.XML_LINK_INFO.1239219218" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.XML_LINK_INFO" value="${ProjName}_linkInfo.xml" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DISPLAY_ERROR_NUMBER.2039933058" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_WRAP.2132063762" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.SEARCH_PATH.148369115" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.SEARCH_PATH" valueType="libPaths">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARY_PATH}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_LIBRARY_PATH}"/>
+                                    <listOptionValue value="${CG_TOOL_SEARCH_PATH}"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.LIBRARY.1433888037" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.LIBRARY" valueType="libs">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARIES}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_LIBRARIES}"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.STACK_SIZE.2059620514" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.STACK_SIZE" value="0x2000" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.HEAP_SIZE.26801684" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.HEAP_SIZE" value="0x400" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_SUPPRESS.1106951515" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DIAG_SUPPRESS" valueType="stringList">
+                                    <listOptionValue value="10325-D"/>
+                                    <listOptionValue value="10063-D"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DEFINE.494479148" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.DEFINE" valueType="definedSymbols">
+                                    <listOptionValue value="_FLASH"/>
+                                </option>
+                            </tool>
+                            <tool id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.objcopy.1155660398" name="C2000 Objcopy Utility" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.objcopy"/>
+                            <tool id="com.ti.ccstudio.buildDefinitions.sysConfig.2075540260" name="SysConfig" superClass="com.ti.ccstudio.buildDefinitions.sysConfig">
+                                <option id="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS.803139222" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS" valueType="stringList">
+                                    <listOptionValue value="${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}"/>
+                                    <listOptionValue value="${COM_TI_F29H85X_SDK_SYSCONFIG_MANIFEST}"/>
+                                </option>
+                            </tool>
+                        </toolChain>
+                    </folderInfo>
+                    <sourceEntries>
+                        <entry excluding="f29h85x_ram_lnk.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                    </sourceEntries>
+                </configuration>
+            </storageModule>
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+        </cconfiguration>
+    </storageModule>
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        <project id="led_ex1_blinky_kalango.com.ti.ccstudio.buildDefinitions.C2000.ProjectType.1957028817" name="C2000" projectType="com.ti.ccstudio.buildDefinitions.C2000.ProjectType"/>
+    </storageModule>
+</cproject>

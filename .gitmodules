@@ -1,0 +1,3 @@
+[submodule "KalangoRTOS"]
+	path = KalangoRTOS
+	url = https://github.com/uLipe/KalangoRTOS

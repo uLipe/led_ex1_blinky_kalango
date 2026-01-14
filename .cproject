@@ -142,6 +142,7 @@
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OTHER_FLAGS.12714108" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.OTHER_FLAGS" valueType="stringList">
                                     <listOptionValue value="-Qunused-arguments"/>
                                 </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.FFAST_MATH.312579198" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.compilerID.FFAST_MATH" value="false" valueType="boolean"/>
                             </tool>
                             <tool id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.linkerDebug.662489154" name="C2000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.exe.linkerDebug">
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.OUTPUT_FILE.769864007" superClass="com.ti.ccstudio.buildDefinitions.C2000_TICLANG_2.0.linkerID.OUTPUT_FILE" value="${ProjName}.out" valueType="string"/>

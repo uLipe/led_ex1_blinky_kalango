@@ -1,7 +1,7 @@
 #ifndef __KALANGO_CONFIG_H
 #define __KALANGO_CONFIG_H
 
-#define CONFIG_TICKS_PER_SEC                1000
+#define CONFIG_TICKS_PER_SEC                10000
 
 #define CONFIG_ENABLE_TASKS                   1
 #define CONFIG_ENABLE_SEMAPHORES              1
